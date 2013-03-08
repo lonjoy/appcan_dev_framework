@@ -15,8 +15,26 @@
     <script>
 	</script>
   </head>
-<body class="um-vp" ontouchstart>
-	I am the pop view.
+<body class="um-vp ub ub-ver" ontouchstart data-role='page' >
+    <div class='uh' id='header' data-role='header'>
+            <ul>
+                <li data-url="#page_1" data-bind='News/newest' ontouchstart ='zy_touch()' onclick='App.Event()'>Menu One</li>
+                <li data-url="#page_2" data-bind='News/hot' ontouchstart ='zy_touch()' onclick='App.Event()'>Menu Two</li>
+                <li data-url="#page_3" data-bind='News/digest' ontouchstart ='zy_touch()' onclick='App.Event()'>Menu Three</li>
+            </ul>
+    </div>
+	<div data-role='content' id='content' class='ub-f1 ub ub-ver'>
+                    <div id='page_1' style='' class='ub-f1'>
+                        <h2>Content2</h2>
+
+                    </div>
+                    <div id='page_2' style='display:none'>
+
+                    </div>
+
+                    <div id='page-3' style='display:none'>
+                    </div>
+            </div>
 </body>
 <script>
 zy_init();
@@ -27,6 +45,8 @@ window.uexOnload=function(type)
 		uexWindow.showBounceView("0","#FFF","0");
 		uexWindow.showBounceView("1","#FFF","0");
 	}
+
+            App.run()
 }
 </script>
 </html>
