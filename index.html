@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="css/base.css">
+    <script src="js/zy_control.js"></script>
+    <script src="js/zy_click.js">
+    </script>
+    <script src='js/zepto.js'> </script>
+    <script src='js/app.js'> </script>
+  </head>
+<body class="um-vp ub ub-ver" ontouchstart data-role='page'>
+	<!-- <div id='header' class='uh' data-role='header'>
+		<div>
+			<h2>Index demo</h2>
+		</div>
+		<div>
+			<h2></h2>
+	</div> -->
+	<div id='content' class='ub-f1 ub' data-role='page'>
+		
+	</div>
+	<!-- <div id='footer' class='uf' data-role='footer'>
+		<ul>
+			<li data-url="index_content.html" onclick='App.Event()' ontouchstart="zy_touch()">
+				<div>goods</div>
+			</li>
+			<li data-url="index_content.html" onclick='App.Event()' ontouchstart="zy_touch()">
+				<div>goods</div>
+			</li>
+			<li data-url="index_content.html" onclick='App.Event()' ontouchstart="zy_touch()">
+				<div>goods</div>
+			</li>
+			<li data-url="index_content.html" onclick='App.Event()' ontouchstart="zy_touch()">
+				<div>goods</div>
+			</li>
+		</ul>
+	</div> -->
+</body>
+<script>
+zy_init();
+App.Route
+App.Route.setdefault('index_content.html');
+window.uexOnload=function(type)
+{
+	if(!type){
+		uexWindow.setBounce("1");
+		uexWindow.showBounceView("0","#FFF","0");
+		uexWindow.showBounceView("1","#FFF","0");
+	}
+    App.ready('index_content.html');
+}
+</script>
+</html>

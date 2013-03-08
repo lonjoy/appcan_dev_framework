@@ -1,0 +1,8 @@
+/*create by chenwenli at swzx.comm*/
+.maintab{
+	background: #333;
+}
+.tab_active{
+	background: #ddd;
+}
+.app1,.app2,.app3,.app4{}
