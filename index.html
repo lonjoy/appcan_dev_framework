@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
-<head>
+<head id='head'>
     <title></title>
     <meta charset="utf-8">
     <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
@@ -9,30 +9,31 @@
     <script src="js/zy_click.js"> </script>
     <script src='js/zepto.js'> </script>
     <script src='js/app.js'> </script>
+    <script type="text/javascript" src='js/debug.js'></script>
   </head>
 <body class="um-vp ub ub-ver" ontouchstart data-role='page'>
-	<div id='header' class='uh' data-role='header'>
+	<div id='header' class='uh c-bla t-wh' data-role='header'>
 		<div></div>
 		<div>
 			<h2>Index demo</h2>
 		</div>
-		<div></div>
+		<a href='#' onclick='window.reload();return false;'>刷新</a>
 	</div>
 	<div id='content' class='ub-f1 ub' data-role='page'>
 		
 	</div>
 	<div id='footer' class='uf' data-role='footer'>
-		<ul>
-			<li data-url="index_content.html" onclick='App.Event()' ontouchstart="zy_touch()">
+		<ul class='ub c-m10'>
+			<li data-url="index_content.html" onclick='App.Event()' ontouchstart="zy_touch()" class='ub-f1'>
 				<div>goods</div>
 			</li>
-			<li data-url="index_content.html" onclick='App.Event()' ontouchstart="zy_touch()">
+			<li data-url="index_content2.html" onclick='App.Event()' ontouchstart="zy_touch()" class='ub-f1'>
 				<div>goods</div>
 			</li>
-			<li data-url="index_content.html" onclick='App.Event()' ontouchstart="zy_touch()">
+			<li data-url="index_content3.html" onclick='App.Event()' ontouchstart="zy_touch()" class='ub-f1'>
 				<div>goods</div>
 			</li>
-			<li data-url="index_content.html" onclick='App.Event()' ontouchstart="zy_touch()">
+			<li data-url="index_content4.html" onclick='App.Event()' ontouchstart="zy_touch()" class='ub-f1'>
 				<div>goods</div>
 			</li>
 		</ul>
@@ -40,8 +41,7 @@
 </body>
 <script>
 zy_init();
-// App.Route.
-App.Route.setdefault('index_content.html');
+App.ready();
 window.uexOnload=function(type)
 {
 	if(!type){
@@ -49,7 +49,10 @@ window.uexOnload=function(type)
 		uexWindow.showBounceView("0","#FFF","0");
 		uexWindow.showBounceView("1","#FFF","0");
 	}
-    	App.ready();
+	require('debug');
+	require('nocache');
+
+    App.Route.setDefault('');
 }
 </script>
 </html>
